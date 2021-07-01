@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <link rel="icon" type="image/png" href="{% static '.\Resources\Yacine\Website_Logo.png'%}">
+  <title>Help me | À propos de nous</title>
+  <meta name="description" content="Savoir ce que les gens disent de nous'%}" />
+  <link rel="stylesheet" href="{% static './Packages/Reset.min.css'%}">
+  <link rel="stylesheet" href="{% static './Styles_About_Us_Y.css'%}">
+  <link rel="stylesheet" href="{% static './Packages/Website_Fonts/Font-Awesome-4.7/css/Font-Awesome.min.css'%}">
+  <link rel="stylesheet" href="{% static './Packages/AoS/AoS.css'%}">
+</head>
+<body>
+  <!-- Navigation Bar -------------------------------------------------------------------->
+  <section class="hero">
+    <nav>
+      <div class="col-nav logo-container-nav Logo_button"><a href="{% url 'Accueil' %}" class="logo-icon-nav" alt="Help me"></a></div>
+      <div class="col-nav menu-container-nav">
+        <ul class="menu-content-nav text-nav">
+          <li class="accueil_button" ><a href="{% url 'Accueil' %}">Accueil</a></li>
+          <li class="open-menu-categories"><a href="#" class="selected-categories">Catégories</a></li>
+          <li class="association_button" ><a href="{% url 'association' %}">Associations</a></li>
+          <li class="about_us_button" ><a href="{% url 'about' %}"><img src="{% static './Resources/Yacine/Banner_Information.png'%}" class="center"></a></li>
+        </ul>
+      </div>
+      <div class="col-nav buttons-container-nav">
+        <div class="buttons-content-nav text-btn-nav">
+          <div class="LS_button" >
+          <a href="admin/">Connexion</a>
+          <a href="{% url 'register' %}">S'Inscrire</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="sub-menu categories">
+      <ul class="sub-menu-list">
+        <li><a href="{% url 'education' %}">Éducation<span>Payer des dettes étudiantes pour des etudiants</span></a></li>
+        <li><a href="{% url 'Sante' %}">Santé<span>Assister quelqu'un avec ses besoin médicaux</span></a></li>
+        <li><a href="{% url 'autres' %}">Autres<span>Pour les dons physiques destinés aux sans-abri</span></a></li>
+      </ul>
+      <a href="#" class="close-menu-categories">
+        <span></span>
+        <span></span>
+      </a>
+    </div>
+    <!-- Part 02 -------------------------------------------------------------------->
+    <section class="closer">
+      <div class="WCUS" style="cursor:default;" data-aos="fade-up" data-aos-once="true" data-aos-duration="1000">
+        <h1>Pourquoi <span style="color:#79be21;">nous</span> choisir ?</h1>
+        <ul>
+          <li>
+            <img id="imgWCUS" src="{% static './Resources/Yacine/WCUS_01.png '%}">
+            <h3>Facile</h3>
+            <h4>Commencez à envoyer des dons en 10 minutes ou moins.
+              Paiements instantanés et aucun processus d'approbation</h4>
+          </li>
+          <li>
+            <img id="imgWCUS" src="{% static './Resources/Yacine/WCUS_02.png'%}">
+            <h3>Confiance</h3>
+            <h4>Depuis notre lancement en 2016, nous avons été approuvés
+              par l'état en 2019 pour la collect des millions et aider les gens.</h4>
+          </li>
+          <li>
+            <img id="imgWCUS" src="{% static './Resources/Yacine/WCUS_03.png'%}">
+            <h3>Liberté</h3>
+            <h4>Disponible à l'échelle nationale et mondiale dans
+              toutes les principales devises. Crowdfunder tout ce que vous voulez.</h4>
+          </li>
+          <li>
+            <img id="imgWCUS" src="{% static './Resources/Yacine/WCUS_04.png'%}">
+            <h3>Support</h3>
+            <h4>Notre support 24h/24 et 7j/7 et nos associations
+              actives vous garantissent la meilleure expérience possible.</h4>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- End Part 02 -------------------------------------------------------------------->
+
+
+    <!-- Part 03 -------------------------------------------------------------------->
+    <section>
+      <div class="MTT" style="cursor:default;" data-aos="fade-up" data-aos-once="true" data-aos-offset="400" data-aos-duration="1000">
+        <h1>Rencontrer <span style="color:#79be21;">l'équipe</span></h1>
+        <ul>
+          <li>
+            <img id="imgMTT" src="{% static './Resources/Yacine/Reviews/Yacine.png'%}">
+            <h3>Yacine Dada</h3>
+            <h4>Développeur Front-End</h4>
+            <h5>
+              <a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+              <a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+              <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+              <a href="#"><i class="fa fa-youtube-square" aria-hidden="true"></i></a>
+              <a href="#"><i class="fa fa-github-square" aria-hidden="true"></i></a>
+            </h5>
+            <h6>"Ce fut un plaisir de travailler sur ce projet,
+              aider les autres rend tout le monde heureux et améliore
+              la vie dans la communauté."</h6>
+          </li>
+          <li>
+            <img id="imgMTT" src="{% static './Resources/Yacine/Reviews/Mounzir.png'%}">
+            <h3>Abdelrahmene Mounzir</h3>
+            <h4>Développeur Back-End</h4>
+            <h5>
+              <a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+              <a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+              <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+              <a href="#"><i class="fa fa-youtube-square" aria-hidden="true"></i></a>
+              <a href="#"><i class="fa fa-github-square" aria-hidden="true"></i></a>
+            </h5>
+            <h6>"Aider les autres est mon plaisir,
+              je mets tout ce que j'ai appris dans ce projet afin
+              que nous puissions faire une meilleure communauté."</h6>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <img id="imgMTT" src="{% static './Resources/Yacine/Reviews/Chaima.png'%}">
+            <h3>Chaima Sehili</h3>
+            <h4>Développeur Back-End</h4>
+            <h5>
+              <a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+              <a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+              <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+              <a href="#"><i class="fa fa-youtube-square" aria-hidden="true"></i></a>
+              <a href="#"><i class="fa fa-github-square" aria-hidden="true"></i></a>
+            </h5>
+            <h6>"Quand j'ai entendu parler de ce projet,
+              j'avais hâte de mettre la main dessus et de travailler
+              avec mon équipe pour en faire une réalité."</h6>
+          </li>
+          <li>
+            <img id="imgMTT" src="{% static './Resources/Yacine/Reviews/Raouf.png'%}">
+            <h3>Raouf Bouakkaz</h3>
+            <h4>Développeur Front-End</h4>
+            <h5>
+              <a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+              <a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+              <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+              <a href="#"><i class="fa fa-youtube-square" aria-hidden="true"></i></a>
+              <a href="#"><i class="fa fa-github-square" aria-hidden="true"></i></a>
+            </h5>
+            <h6>"J'ai toujours eu l'impression que les anciennes méthodes
+              de don étaient lentes et peu fiables. Ce projet est
+              la meilleure chose dans ma carrière."</h6>
+          </li>
+          <li>
+            <img id="imgMTT" src="{% static './Resources/Yacine/Reviews/Islam.png'%}">
+            <h3>Islam Bouchou</h3>
+            <h4>Développeur Back-End</h4>
+            <h5>
+              <a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+              <a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+              <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+              <a href="#"><i class="fa fa-youtube-square" aria-hidden="true"></i></a>
+              <a href="#"><i class="fa fa-github-square" aria-hidden="true"></i></a>
+            </h5>
+            <h6>"S'entraider est nécessaire en tant que société,
+              c'est pourquoi j'ai aidé avec ce projet.
+              Le regarder maintenant me rend fier."</h6>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- End Part 03 -------------------------------------------------------------------->
+  </section>
+  <!-- End Navigation Bar -------------------------------------------------------------------->
+  <script src="{% static './Packages/JQuery-3.6.0.js'%}"></script>
+  <script src="{% static './Packages/AoS/AoS.js'%}"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script src="{% static './Scripts_Accueil_Y.js '%}"  ></script>
+</body>
+
+
+<footer>
+  <section>
+    <div class="Footer" style="cursor:default;">
+    <div data-aos="fade-up" data-aos-once="true" data-aos-offset="200" data-aos-duration="1000">
+        <ul>
+        <li>
+          <div class="Contact">
+            <h1>Liens</h1>
+            <hr class="red">
+            <div class="Links">
+            <h2><a href="{% url 'Accueil' %}" >Accueil</a></h1>
+              <h2><a href="#" >Associations</a></h2>
+              <h2><a href="{% url 'education' %}" >Catégorie - Éducation</a></h2>
+              <h2><a href="{% url 'Sante' %}" >Catégorie - Santé</a></h2>
+              <h2><a href="{% url 'autres' %}" >Catégorie - Autres</a></h2>
+              <h2><a href="{% url 'about' %}" >À propos de nous</a></h2>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="Contact">
+            <h1>Nos réseaux sociaux</h1>
+            <hr class="red">
+            <div class="Links">
+              <h2><a href="#" >Facebook</a></h2>
+              <h2><a href="#" >Instagram</a></h2>
+              <h2><a href="#" >Twitter</a></h2>
+              <h2><a href="#" >YouTube</a></h2>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="Contact">
+            <div class="Info">
+                <h1>Localisation</h1>
+                <hr class="red">
+                <h2>Sahat El Wiam , Sidi Bel Abbès 22000</h2>
+              <div class="Separater">
+                <h1>E-mail</h1>
+                <hr class="red">
+                <h2>Team10@esi-sba.Dz</h2>
+              </div>
+              <div class="Separater1">
+                <h1>N° Téléphone</h1>
+                <hr class="red">
+                <h2>+213 48 74 94 52</h2>
+              </div>
+            </div>
+          </div>
+        </li>
+        </ul>
+        <div class="Separater2">
+          <hr class="red">
+          <h2>© 2021 ESI-SBA Helpme. Conçu et Développé par Team10</h2>
+        </div>
+    </div>
+    </div>
+  </section>
+</footer>
+</html>

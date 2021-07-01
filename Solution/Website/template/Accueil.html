@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="{% static '.\Resources\Yacine\Website_Logo.png' %}">
+  <title>Help me | Accueil</title>
+  <meta name="description" content="Help Me est la plateforme de collecte de fonds en ligne la plus fiable. Démarrez une campagne de financement participatif en un seul clic" />
+  <link rel="stylesheet" href="{% static './Packages/Reset.min.css'%}">
+  <link rel="stylesheet" href="{% static './Styles_Accueil_Y.css' %}">
+  <link rel="stylesheet" href="{% static './Packages/AoS/AoS.css' %}">
+  <link rel="stylesheet" href="{% static './Packages/TinySlider/Tiny-Slider.css' %}">
+</head>
+<body>
+  <!-- Navigation Bar -------------------------------------------------------------------->
+  <section class="hero">
+    <nav>
+      <div class="col-nav logo-container-nav Logo_button"><a href="{% url 'Accueil' %}" class="logo-icon-nav" alt="Help me"></a></div>
+      <div class="col-nav menu-container-nav">
+        <ul class="menu-content-nav text-nav">
+          <li class="accueil_button" ><a href="{% url 'Accueil' %}">Accueil</a></li>
+          <li class="open-menu-categories"><a href="#" class="selected-categories">Catégories</a></li>
+          <li class="association_button" ><a href="{% url 'association' %}">Associations</a></li>
+          <li class="about_us_button" ><a href="{% url 'about' %}"><img src="{% static './Resources/Yacine/Banner_Information.png' %}" class="center"></a></li>
+        </ul>
+      </div>
+      <div class="col-nav buttons-container-nav">
+        <div class="buttons-content-nav text-btn-nav">
+          <div class="LS_button" >
+            <a href="admin/">Connexion</a>
+            <a href="{% url 'register' %}">S'Inscrire</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="sub-menu categories">
+      <ul class="sub-menu-list">
+        <li><a href="{% url 'education' %}">Éducation<span>Payer des dettes étudiantes pour des etudiants</span></a></li>
+        <li><a href="{% url 'Sante' %}">Santé<span>Assister quelqu'un avec ses besoin médicaux</span></a></li>
+        <li><a href="{% url 'autres' %}">Autres<span>Pour les dons physiques destinés aux sans-abri</span></a></li>
+      </ul>
+      <a href="#" class="close-menu-categories">
+        <span></span>
+        <span></span>
+      </a>
+    </div>
+    <div class="hero-heading">
+      <h1 style="cursor:default;">Découvrez comment vous pouvez faire un changement dans votre communauté.</h1>
+      <a href="#CCM" style="cursor:pointer";><h2>→ </h2><h2> Comment ça marche ? </h2><h2> ←</h2></a>
+      <script src="{% static './Packages/AoS/Anime.min.js' %}"></script>
+    </div>
+    <div class="closer"></div>
+  </section>
+  <!-- End Navigation Bar -------------------------------------------------------------------->
+
+
+  <!-- Part 02 -------------------------------------------------------------------->
+  <section>
+    <div class="whiteBoard" style="cursor:default;">
+      <h1 data-aos="fade-up" data-aos-once="true" data-aos-offset="300" data-aos-duration="1000">Bienvenue à la charité <span style="color:#2c5f2d;">help</span><span style="color:#79be21;">me</span></h1>
+      <h2 data-aos="fade-up" data-aos-once="true" data-aos-offset="200" data-aos-duration="1000">Nous sommes une plate-forme caritative indépendante gérée par des assossiations Algériennes certifiés,
+         nous atteignons tous les coins du pays en partageant l'espoir et en donnons l'aide à tous qui ont besoin,
+          que ca soit  en domaine : Éducative, Santé ... etc. Chaque jour, de plus en plus d'assossiations et des donateurs se joignent
+          et participent à nos œuvres caritatives, avec cela le nombre de nos projets financés ne cesse d'augmenter
+          et les gens trouvent avec qui partager leur joie. Avec votre aide, nous pouvons atteindre plus de personnes et résoudre leurs problèmes.</h2>
+      <ul>
+        <li data-aos="fade-up" data-aos-once="true" data-aos-offset="50" onclick="location.href='{% url 'education' %}'"; style="cursor:pointer;";>
+          <img id="img1" src="{% static './Resources/Yacine/CA_Education.png' %}">
+          <img id="img1" src="{% static './Resources/Yacine/CA_Education_SL.png' %}">
+          <h3>Education</h3>
+          <h4>Cette catégorie est proposée à ceux qui ont besoin d'aide pour des objectifs éducatifs qu'ils soit :
+            Étudiants, Enseignants ... Ici, ils peuvent demander de l'aide pour Rembourser leur dette étudiante,
+            Collecter plus d'argent pour s'inscrire à une bourse ...
+            Votre aide est vraiment apprécié car ils sont l'avenir de demain.</h4>
+        </li>
+        <li data-aos="fade-up" data-aos-once="true" data-aos-offset="50" onclick="location.href='{% url 'Sante' %}'"; style="cursor:pointer;";>
+          <img id="img2" src="{% static './Resources/Yacine/CA_Health.png' %}">
+          <img id="img2" src="{% static './Resources/Yacine/CA_Health_SL.png' %}">
+          <h3>Santé</h3>
+          <h4>Cette partie de la plateforme est dédiée à ceux qui ont besoin de soins médicaux urgents :
+            Chirurgies, Paiement d'un fauteuil roulant, Don de sang ... Cette catégorie est aussi offerte aux personnels médicaux
+            & aux hôpitaux qui ont besoin de nouveaux équipements et technologies. Les dons ici sont toujours appréciés.</h4>
+        </li>
+        <li data-aos="fade-up" data-aos-once="true" data-aos-offset="50" onclick="location.href='{% url 'autres' %}'"; style="cursor:pointer;";>
+          <img id="img3" src="{% static './Resources/Yacine/CA_Other.png' %}">
+          <img id="img3" src="{% static './Resources/Yacine/CA_Other_SL.png' %}">
+          <h3>Autres</h3>
+          <h4>Ici, vous trouverez tout ce qui n'est pas lié à la santé ou à l'éducation, cela varie Des dons physiques, Du financement pour construire
+            des camps pour les sans-abri ou bien pour la plantation des arbres en masse pour lutter contre la déforestation.
+            Les dons ici affectent directement la communauté, donc chaque euro compte.</h4>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <!-- End Part 02 -------------------------------------------------------------------->
+
+
+  <!-- Part 03 -------------------------------------------------------------------->
+  <section>
+    <div class="Stats" style="cursor:default;">
+      <h1 data-aos="fade-up" data-aos-once="true" data-aos-offset="200" data-aos-duration="1000">Statistiques Techniques</h1>
+      <h2 data-aos="fade-up" data-aos-once="true" data-aos-offset="90" data-aos-duration="1000">Depuis nos débuts en 2016, de nombreux événements sont passées et pour montrer ce que nous avons donné à la communauté,
+        nous avons rassemblé ces analyses qui représentent le travail acharné que nous faisons ici.</h2>
+      <ul>
+        <li data-aos-id="inview" data-aos="fade-up" data-aos-once="true" data-aos-offset="50" data-aos-duration="1000" style="cursor:default;">
+          <img id="img1_1" src="{% static './Resources/Yacine/STAT_Fund_Raised.png' %}">
+          <h3>€ <span class="count">0</span> M</h3>
+          <h4>Fonds Levés</h4>
+        </li>
+        <li data-aos="fade-up" data-aos-once="true" data-aos-offset="50" data-aos-duration="1000" style="cursor:default;">
+          <img id="img1_3" src="{% static './Resources/Yacine/STAT_Donations.png' %}">
+          <h3 class="count1">0</h3>
+          <h4>Dons</h4>
+        </li>
+        <li data-aos="fade-up" data-aos-once="true" data-aos-offset="50" data-aos-duration="1000" style="cursor:default;">
+          <img id="img1_2" src="{% static './Resources/Yacine/STAT_Cmpt_Projects.png' %}">
+          <h3 class="count2">0</h3>
+          <h4>Projets Terminés</h4>
+        </li>
+        <li data-aos="fade-up" data-aos-once="true" data-aos-offset="50" data-aos-duration="1000" style="cursor:default;">
+          <img id="img1_4" src="{% static './Resources/Yacine/STAT_Assossiations.png' %}">
+          <h3 class="count3">0</h3>
+          <h4>Associations</h4>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <!-- End Part 03 -------------------------------------------------------------------->
+
+
+  <!-- Part 04 -------------------------------------------------------------------->
+  <section id="CCM">
+    <div class="whiteBoard2" style="cursor:default;">
+      <h1 data-aos="fade-up" data-aos-once="true" data-aos-offset="165" data-aos-duration="1000">Comment ça marche ?</h1>
+      <h2 data-aos="fade-up" data-aos-once="true" data-aos-offset="70" data-aos-duration="1000">Vous trouverez ici plus d'informations sur quel types de services nous proposons
+        à nos clients et comment vous pouvez en bénéficier.</h2>
+        <div class="Steps_Association" data-aos="fade-up" data-aos-once="true" data-aos-offset="100" data-aos-duration="5000">
+          <!-- List Associations -------------------------------------------------------------------->
+          <div class="Steps_Separator">
+            <h3>Si vous êtes <span>Une Association :</span></h3>
+            <ul>
+              <li>
+                <img id="img2_3" src="{% static './Resources/Yacine/Steps_Association_01_SL.png' %}">
+                <img id="img2_3" src="{% static './Resources/Yacine/Steps_Association_01.png' %}">
+                <h4><a href="./Web_Sign_In_Y.html">Enregistrez-vous</a> sur notre plateforme en faisant
+                  cela, vous pouvez commencer à ajouter les cas des personnes dans le besoin
+                  en utilisant votre <a href="./Web_Log_In_Y.html">compte</a>.</h4>
+              </li>
+              <li>
+                <img id="Arrow" src="{% static './Resources/Yacine/Arrow_Type_01.png' %}">
+                <img id="Arrow" src="{% static './Resources/Yacine/Arrow_Type_01_SL.png' %}">
+              </li>
+              <li>
+                <img id="img2_3" src="{% static './Resources/Yacine/Steps_Association_02_SL.png' %}">
+                <img id="img2_3" src="{% static './Resources/Yacine/Steps_Association_02.png' %}">
+                <h4>Utilisez vos réseaux sociaux pour faire connaître vos cas ajoutés et informer
+                  les gens de notre plate-forme qui permet d'aider facilement les autres.</h4>
+              </li>
+              <li>
+                <img id="Arrow" src="{% static './Resources/Yacine/Arrow_Type_01.png' %}">
+                <img id="Arrow" src="{% static './Resources/Yacine/Arrow_Type_01_SL.png' %}">
+              </li>
+              <li>
+                <img id="img2_3" src="{% static './Resources/Yacine/Steps_Association_03_SL.png' %}">
+                <img id="img2_3" src="{% static './Resources/Yacine/Steps_Association_03.png' %}">
+                <h4>Tout est fait maintenant, vous n'avez plus a faire que
+                 d'attendre à la gentillesse des lecteurs de faire un don
+                et tout l'argent sera envoyé en conséquence.</h4>
+              </li>
+            </ul>
+          </div>
+          <!-- End List Associations -------------------------------------------------------------------->
+          <!-- List M7taj -------------------------------------------------------------------->
+          <div class="Steps_Separator">
+            <h3>Si vous avez <span>Besoin D'aide :</span></h3>
+            <ul>
+              <li>
+                <img id="img2_3" src="{% static './Resources/Yacine/Steps_Needing_01_SL.png' %}">
+                <img id="img2_3" src="{% static './Resources/Yacine/Steps_Needing_01.png' %}">
+                <h4>Visitez notre page <a href="#">d'associations</a> certifiées,
+                  choisissez une qui vous convient le mieux et contactez-la par e-mail
+                  ou par numéro de téléphone.</h4>
+              </li>
+              <li>
+                <img id="Arrow" src="{% static './Resources/Yacine/Arrow_Type_01.png' %}">
+                <img id="Arrow" src="{% static './Resources/Yacine/Arrow_Type_01_SL.png' %}">
+              </li>
+              <li>
+                <img id="img2_3" src="{% static './Resources/Yacine/Steps_Needing_02_SL.png' %}">
+                <img id="img2_3" src="{% static './Resources/Yacine/Steps_Needing_02.png' %}">
+                <h4>Envoyez la toutes les informations et documents qu'elle a besoin concernant
+                  votre urgence et elle s'occupera du reste pour vous.</h4>
+              </li>
+              <li>
+                <img id="Arrow" src="{% static './Resources/Yacine/Arrow_Type_01.png' %}">
+                <img id="Arrow" src="{% static './Resources/Yacine/Arrow_Type_01_SL.png' %}">
+              </li>
+              <li>
+                <img id="img2_3" src="{% static './Resources/Yacine/Steps_Needing_03_SL.png' %}">
+                <img id="img2_3" src="{% static './Resources/Yacine/Steps_Needing_03.png' %}">
+                <h4>Une fois elle ajoutera votre cas à l'une des catégories
+                  ( <a href="#">Santé</a>, <a href="#">Education</a>, <a href="#">Autre</a> )
+                  nos donateurs pourront le voir et vous faire un don directement à votre compte.</h4>
+              </li>
+            </ul>
+          </div>
+          <!-- End List M7taj -------------------------------------------------------------------->
+          <!-- List Donateur -------------------------------------------------------------------->
+          <div class="Steps_Separator">
+            <h3>Si vous êtes <span>Un Donateur :</span></h3>
+            <ul>
+              <li>
+                <img id="img2_3" src="{% static './Resources/Yacine/Steps_Donner_01_SL.png' %}">
+                <img id="img2_3" src="{% static './Resources/Yacine/Steps_Donner_01.png' %}">
+                <h4>Visitez nos différentes catégories
+                  ( <a href="#">Santé</a>, <a href="#">Education</a>, <a href="#">Autre</a> )
+                  qui ont des cas d'urgence, choisissez un et faites-lui un don.</h4>
+              </li>
+              <li>
+                <img id="Arrow" src="{% static './Resources/Yacine/Arrow_Type_01.png' %}">
+                <img id="Arrow" src="{% static './Resources/Yacine/Arrow_Type_01_SL.png' %}">
+              </li>
+              <li>
+                <img id="img2_3" src="{% static './Resources/Yacine/Steps_Donner_02_SL.png' %}">
+                <img id="img2_3" src="{% static './Resources/Yacine/Steps_Donner_02.png' %}">
+                <h4>Effectuez le paiement selon votre cœur, nous n'imposons aucun
+                  montant fixe sur nos donateurs, tout montant est apprécié.</h4>
+              </li>
+              <li>
+                <img id="Arrow" src="{% static './Resources/Yacine/Arrow_Type_01.png' %}">
+                <img id="Arrow" src="{% static './Resources/Yacine/Arrow_Type_01_SL.png' %}">
+              </li>
+              <li>
+                <img id="img2_3" src="{% static './Resources/Yacine/Steps_Donner_03_SL.png' %}">
+                <img id="img2_3" src="{% static './Resources/Yacine/Steps_Donner_03.png' %}">
+                <h4>Nous vous remercions pour votre don et la personne que vous venez d'aider l'aussi,
+                  nous apprécions si vous aidez plus de gens quand vous pouvez.</h4>
+              </li>
+            </ul>
+          </div>
+          <!-- End List Donateur -------------------------------------------------------------------->
+        </div>
+    </div>
+  </section>
+  <!-- End Part 04 -------------------------------------------------------------------->
+
+
+  <!-- Part 05 -------------------------------------------------------------------->
+ <section>
+    <div class="SlideShow" style="cursor:default;">
+      <h1 data-aos="fade-up" data-aos-once="true" data-aos-offset="160" data-aos-duration="1000">Commencez à <span style="color:#2c5f2d;">aider</span> les gens maintenant !</h1>
+      <h2 data-aos="fade-up" data-aos-once="true" data-aos-offset="70" data-aos-duration="1000">Voici des exemples des cas urgents que nous avons ,
+        choisissez celui qui vous convient et vous pouvez lui faire un don en un seul clic.</h2>
+
+      <div data-aos-id="cards" data-aos="fade-up" data-aos-once="true" data-aos-offset="400" data-aos-duration="1000">
+<div class="my-slider">
+
+         {% for cas in cass %}
+          <div class="Belt">
+            <img class="img_card" src="{{ cas.img.url }}">
+            <h1>{{cas.titre}} </h1>
+            <h2>{{cas.resumé}}</h2>
+            <div class="progress-wrap progress" data-progress-percent="44">44 %
+              <div class="progress-bar progress"></div>
+            </div>
+            <button type="button" class="btn_card"  style="cursor: pointer;" ><a href="{% url 'details' cas.id %}"> Détails </a></button>
+          </div>
+         {% endfor %}
+</div>
+
+      </div>
+    </div>
+
+  </section>
+  <!-- End Part 05 -------------------------------------------------------------------->
+
+
+  <!-- Part 06 -------------------------------------------------------------------->
+  <section>
+    <div class="Reviews" style="cursor:default;">
+    <h1 data-aos="fade-up" data-aos-once="true" data-aos-offset="100" data-aos-duration="1000">Que disent les gens à notre propos</h1>
+    <div data-aos="fade-up" data-aos-once="true" data-aos-offset="320" data-aos-duration="1000">
+      <!-- List Reviews 01 -------------------------------------------------------------------->
+        <ul>
+          <li>
+            <img id="Re01" src="{% static '.\Resources\Yacine\Reviews\Raouf.png' %}">
+            <h4>"Je ne comprends pas comment nous avons fait des dons sans l'aide de cette
+              plate-forme auparavant, cela facilite grandement les dons et les demandes d'aide."</h4>
+            <h5>- Raouf Bouakkaz</h5>
+          </li>
+          <li>
+            <img id="Re01" src="{% static '.\Resources\Yacine\Reviews\Islam.png' %}">
+            <h4>"Je ne sais pas quoi dire d'autre, les résultats de ce que font nos
+              associations ici parlent d'eux-mêmes."</h4>
+            <h5>- Islam Bouchou</h5>
+          </li>
+          <li>
+            <img id="Re01" src="{% static '.\Resources\Yacine\Reviews\Mounzir.png' %}">
+            <h4>"Exactement ce que je cherchais. Je tiens à vous remercier personnellement
+            pour votre plate-forme exceptionnelle. Merci beaucoup pour votre aide."</h4>
+            <h5>- Abderrahmane Boucenna </h5>
+          </li>
+        </ul>
+        <!-- List Reviews 02 -------------------------------------------------------------------->
+        <ul>
+          <li>
+            <img id="Re01" src="{% static '.\Resources\Yacine\Reviews\Chaima.png' %}">
+            <h4>"Helpme est la vraie affaire ! Je suis vraiment impressionné à plusieurs niveaux.
+              je souhaite bon courage à nos associations et je remercie nos donneurs."</h4>
+            <h5>- Chaima Sehili</h5>
+          </li>
+          <li>
+            <img id="Re01" src="{% static '.\Resources\Yacine\Reviews\Zorgani.png' %}">
+            <h4>"moi je comprend pas le français."</h4>
+            <h5>- Nassim Rayan Zorgani</h5>
+          </li>
+          <li>
+            <img id="Re01" src="{% static '.\Resources\Yacine\Reviews\Yacine.png' %}">
+            <h4>"J'adore votre système. Je ne suis pas en mesure de vous dire à quel point
+              je suis heureux avec Help Me, c'est exactement ce qui manquait à notre financement
+              participatif."</h4>
+            <h5>- Yacine Dada</h5>
+          </li>
+        </ul>
+      <!-- End List Reviews -------------------------------------------------------------------->
+    </div>
+    </div>
+  </section>
+  <!-- End Part 06 -------------------------------------------------------------------->
+  <script src="{% static './Packages/JQuery-3.6.0.js ' %}"></script>
+  <script src="{% static './Packages/AoS/AoS.js' %}"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script src="{% static './Scripts_Accueil_Y.js' %}"></script>
+  <script src="{% static './Packages/TinySlider/Tiny-Slider.js' %}"></script>
+  <script>
+    var slider = tns({
+    container: '.my-slider',
+    fixedWidth: 350,
+    controls: false,
+    nav: false,
+    autoplayButtonOutput: false,
+    loop: true,
+    autoplay: true,
+    autoplayHoverPause: true,
+    autoplayTimeout: 1500,
+    arrowKeys: true,
+    swipeAngle: false,
+    items: 8,
+    slideBy: 1,
+    });
+  </script>
+</body>
+
+
+<footer>
+  <section>
+    <div class="Footer" style="cursor:default;">
+    <div data-aos="fade-up" data-aos-once="true" data-aos-offset="200" data-aos-duration="1000">
+        <ul>
+        <li>
+          <div class="Contact">
+            <h1>Liens</h1>
+            <hr class="red">
+            <div class="Links">
+              <h2><a href="{% url 'Accueil' %}" >Accueil</a></h2>
+              <h2><a href="#" >Associations</a></h2>
+              <h2><a href="{% url 'education' %}" >Catégorie - Éducation</a></h2>
+              <h2><a href="{% url 'Sante' %}" >Catégorie - Santé</a></h2>
+              <h2><a href="{% url 'autres' %}" >Catégorie - Autres</a></h2>
+              <h2><a href="{% url 'about' %}" >À propos de nous</a></h2>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="Contact">
+            <h1>Nos réseaux sociaux</h1>
+            <hr class="red">
+            <div class="Links">
+              <h2><a href="#" >Facebook</a></h2>
+              <h2><a href="#" >Instagram</a></h2>
+              <h2><a href="#" >Twitter</a></h2>
+              <h2><a href="#" >YouTube</a></h2>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="Contact">
+            <div class="Info">
+                <h1>Localisation</h1>
+                <hr class="red">
+                <h2>Sahat El Wiam , Sidi Bel Abbès 22000</h2>
+              <div class="Separater">
+                <h1>E-mail</h1>
+                <hr class="red">
+                <h2>Team10@esi-sba.Dz</h2>
+              </div>
+              <div class="Separater1">
+                <h1>N° Téléphone</h1>
+                <hr class="red">
+                <h2>+213 48 74 94 52</h2>
+              </div>
+            </div>
+          </div>
+        </li>
+        </ul>
+        <div class="Separater2">
+          <hr class="red">
+          <h2>© 2021 ESI-SBA Helpme. Conçu et Développé par Team10</h2>
+        </div>
+    </div>
+    </div>
+  </section>
+</footer>
+</html>

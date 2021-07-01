@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+	<meta charset="UTF-8"/>
+  <link rel="icon" type="image/png" href="{% static '.\Resources\Yacine\Website_Logo.png' %}">
+  <title>Help me | Inscription</title>
+  <meta name="description" content="Inscrivez-vous en tant qu'assossiation et commencez à aider les gens." />
+	<link rel="stylesheet" type="text/css" href="{% static 'Styles_Sign_In_Log_In_Y.css' %}">
+	<link rel="stylesheet" href="{%static './Packages/Website_Fonts/Font-Awesome-4.7/css/Font-Awesome.min.css' %} "> <!-- hadi-->
+	<link rel="stylesheet" href="{% static './Packages/FilePond/Normalize.min.css' %}">
+	<link rel='stylesheet' href="{% static ' ./Packages/FilePond/FilePond-Plugin-Image-Preview.min.css' %}">
+	<link rel='stylesheet' href="{% static './Packages/FilePond/FilePond-Plugin-Pdf-Preview.min.css' %}">
+	<link href=" {% static './Packages/FilePond/FilePond.css' %}" rel="stylesheet" />
+</head>
+<body>
+	<!-- Sign In Form -------------------------------------------------------------------->
+	<section>
+		<div class="Hero_Sign_In"></div>
+		<div class="sign_in">
+			<h1><a href="{% url 'Accueil' %}" class="return">←</a>Formulaire d'inscription</h1>
+			<form class="login100-form validate-form" action="register" enctype="multipart/form-data" method="post">
+				{% csrf_token %}
+				<div class="Avatar_Drop">
+					<!--accept="image/png, image/jpeg, image/gif" ta7t--->
+					<input type="file" class="filepond" name="images" accept="image/png, image/jpeg, image/gif"  id="Avatar_Drop" data-max-file-size="15MB" data-max-files="1"/>
+				</div>
+				<div class="wrap-input100 validate-input" data-validate="Un Nom d'association est requis">
+					<input class="input100" type="text" name="nom_association" placeholder="Nom d'association">
+					<span class="focus-input100"></span>
+					<span class="symbol-input100">
+						<i class="fa fa-user" aria-hidden="true"></i>
+					</span>
+				</div>
+				<div class="wrap-input100 validate-input" data-validate="Un Numéro de téléphone réel est requis">
+					<input class="input100" type="text" name="n_telephone" placeholder="Numéro de téléphone">
+					<span class="focus-input100"></span>
+					<span class="symbol-input100">
+						<i class="fa fa-phone" aria-hidden="true"></i>
+					</span>
+				</div>
+				<div class="wrap-input100 validate-input" data-validate="Un E-mail valide est requis">
+					<input class="input100" type="text" name="email" placeholder="E-mail">
+					<span class="focus-input100"></span>
+					<span class="symbol-input100">
+						<i class="fa fa-envelope" aria-hidden="true"></i>
+					</span>
+				</div>
+				<div class="wrap-input100 validate-input" data-validate="Un Mot de passe est requis">
+					<input class="input100" type="password" name="mot_de_pass" placeholder="Mot de passe">
+					<span class="focus-input100"></span>
+					<span class="symbol-input100">
+						<i class="fa fa-lock" aria-hidden="true"></i>
+					</span>
+				</div>
+				<div class="wrap-input100 validate-input" data-validate="Doit être le même que le précédent">
+					<input class="input100" type="password" name="c_mot_de_pass" placeholder="Confirmez le mot de passe">
+					<span class="focus-input100"></span>
+					<span class="symbol-input100">
+						<i class="fa fa-lock" aria-hidden="true"></i>
+					</span>
+				</div>
+				<div class="wrap-input100 validate-input" data-validate="Un Lieu d'assossiation est requis">
+					<input class="input100" type="text" name="location" placeholder="Lieu d'association">
+					<span class="focus-input100"></span>
+					<span class="symbol-input100">
+						<i class="fa fa-location-arrow" aria-hidden="true"></i>
+					</span>
+				</div>
+				<div class="Certificate_Drop">
+					<input type="file" name="filepond2" multiple data-max-file-size="25MB" data-max-files="1" id="Certificate_Drop">
+				</div>
+				<div class="wrap-input100 validate-input" data-validate="Des coordonnées CCP valides sont requises">
+					<input class="input100" type="text" name="ccp" placeholder="N° de compte CCP - Clé CCP">
+					<span class="focus-input100"></span>
+					<span class="symbol-input100">
+						<i class="fa fa-credit-card-alt" aria-hidden="true"></i>
+					</span>
+				</div>
+				<div class="form_check_input">
+					<input type="checkbox" class="validate-input"><span> J'ai lu et j'accepte les </span><a href="./Resources/Yacine/Terms&Conditions.pdf">Termes et Conditions</a></input>
+				</div>
+				<div class="container-login100-form-btn">
+					<button class="login100-form-btn" type="submit">Soumettre</button>
+				</div>
+			</form>
+		</div>
+	</section>
+	<!-- End Sign In Form -------------------------------------------------------------------->
+	<script src="{% static './Packages/JQuery-3.6.0.js' %}"></script>
+	<script src="{% static './Packages/FilePond/FilePond-Plugin-File-Encode.min.js' %}"></script>
+	<script src="{% static './Packages/FilePond/FilePond-Plugin-File-Validate-Size.min.js' %}"></script>
+	<script src="{% static './Packages/FilePond/FilePond-Plugin-Image-Exif-Orientation.min.js' %}"></script>
+	<script src="{% static './Packages/FilePond/FilePond-Plugin-Image-Preview.min.js' %}"></script>
+	<script src="{% static './Packages/FilePond/FilePond-Plugin-File-Validate-Type.min.js' %}"></script>
+	<script src="{% static './Packages/FilePond/FilePond-Plugin-Image-Crop.min.js' %}"></script>
+	<script src="{% static './Packages/FilePond/FilePond-Plugin-Image-Resize.min.js' %}"></script>
+	<script src="{% static './Packages/FilePond/FilePond-Plugin-Image-Transform.min.js' %}"></script>
+	<script src="{% static './Packages/FilePond/FilePond-Plugin-Pdf-Preview.min.js' %}"></script>
+	<script src="{% static './Packages/FilePond/FilePond.js' %}"></script>
+	<script>
+		FilePond.registerPlugin(
+			FilePondPluginFileEncode,
+			FilePondPluginFileValidateSize,
+			FilePondPluginFileValidateType,
+			FilePondPluginImageExifOrientation,
+			FilePondPluginImagePreview,
+			FilePondPluginImageCrop,
+			FilePondPluginImageResize,
+			FilePondPluginImageTransform,
+			FilePondPluginPdfPreview
+		);
+		FilePond.create(
+			document.querySelector('input[id="Avatar_Drop"]'), {
+				labelIdle: `Déposez ici le logo de votre association ou <span class="filepond--label-action" style="color:CornflowerBlue;">Parcourir</span>`,
+				imagePreviewHeight: 170,
+				imageCropAspectRatio: '1:1',
+				imageResizeTargetWidth: 200,
+				imageResizeTargetHeight: 200,
+				stylePanelLayout: 'compact circle',
+				styleLoadIndicatorPosition: 'center bottom',
+				styleButtonRemoveItemPosition: 'center bottom'
+			}
+		);
+		const inputElement = document.querySelector('input[id="Avatar_Drop"]');
+		const pond = FilePond.create(inputElement);
+
+		FilePond.create(
+			document.querySelector('input[id="Certificate_Drop"]'), {
+				labelIdle: `Déposez ici le certificat fourni par l'état qui prouve que vous êtes une association valide ou <span class="filepond--label-action" style="color:CornflowerBlue;">Parcourir</span>`,
+				imagePreviewHeight: 195,
+				imageResizeTargetWidth: 100,
+				imageResizeTargetHeight: 225,
+				allowPdfPreview: true,
+    		pdfPreviewHeight: 200,
+    		pdfComponentExtraParams: 'toolbar=0&view=fit&page=1'
+			}
+		);
+		const inputElement1 = document.querySelector('input[id="Certificate_Drop"]');
+		const pond1 = FilePond.create(inputElement1);
+	</script>
+	<script src="{% static 'Scripts_Sign_In_Log_In_Y.js ' %}"></script>
+</body>
+</html>

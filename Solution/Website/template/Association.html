@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'association.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <link rel="stylesheet" href="{% static './Packages/Aos.css' %}">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <title>Help me|Associations</title>
+</head>
+
+<body>
+    <!------------Navigation bar ------------------->
+
+    <section class="hero">
+        <nav>
+          <div class="col-nav logo-container-nav"><a href="{% url 'Accueil' %}" class="logo-icon-nav" alt="Help me"></a></div>
+          <div class="col-nav menu-container-nav">
+            <ul class="menu-content-nav text-nav">
+              <li class="accueil_button"><a href="{% url 'Accueil' %}">Accueil</a></li>
+              <li class="open-menu-categories"><a href="#" class="selected-categories">Catégories</a></li>
+              <li class="association_button"><a href="{% url 'association' %}">Associations</a></li>
+              <li><a href="{% url 'about' %}"><img src="{% static './Resources/Yacine/Banner_Information.png' %}" class="center"></a></li>
+            </ul>
+          </div>
+          <div class="col-nav buttons-container-nav">
+            <div class="buttons-content-nav text-btn-nav">
+             <a href="../admin/">Connexion</a>
+             <a href="{% url 'register' %}">S'Inscrire</a>
+            </div>
+          </div>
+        </nav>
+        <div class="sub-menu categories">
+          <ul class="sub-menu-list">
+            <li><a href="{% url 'education' %}">Éducation<span>Payer des dettes étudiantes et des bourses pour des etudiants</span></a></li>
+            <li><a href="{% url 'Sante' %}">Santé<span>Assister quelqu'un avec ses besoin médicaux</span></a></li>
+            <li><a href="{% url 'autres' %}">Autres<span>Pour les dons physiques destinés aux sans-abri ./person.jpg etc</span></a></li>
+          </ul>
+          <a href="#" class="close-menu-categories">
+            <span></span>
+            <span></span>
+          </a>
+        </div>
+      </section>
+      <!-------------------end of navigation bar ---------------------------------------->
+      <!-------------------List  -------------------------------------------------------->
+       <div class="title"><h1 class="title-text">Notre Associations</h1>
+        <form class="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+    </div>
+       <div id="carouselExampleControls" class="carousel slide container">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row">
+
+
+                <div class="card col-4">
+                    <img src="{% static './person.png' %}" class="card-img-top" alt="./person.png">
+                    <div class="card-body">
+                      <h5 class="card-title">nom d'association: </h5>
+                      <h6 class="card-title">email:  </h6>
+                      <h6 class="card-title">lieu de bureau:</h6>
+                      <h6 class="card-title">Wilaya: </h6>
+                      <h6 class="card-title">telephone:  </h6>
+                      <h6 class="card-title">ccp:  </h6>
+
+                      <!-- <p class="card-text">resumé sur l'association:</p> -->
+
+                      <!-- <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-primary">Envoyer un message</button> -->
+                    </div>
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-primary">Envoyer un message</button>
+
+                  </div>
+
+
+                  </div>
+
+            </div>
+          </div>
+        </div>
+
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="mb-3">
+                      <label for="recipient-name" class="col-form-label">Recipient:</label>
+                      <input type="text" class="form-control" id="recipient-name">
+                    </div>
+                    <div class="mb-3">
+                      <label for="message-text" class="col-form-label">Message:</label>
+                      <textarea class="form-control" id="message-text"></textarea>
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Send message</button>
+                </div>
+              </div>
+            </div>
+          </div>
+              </div>
+            </div>
+          </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      </div>
+      <!-------------------end of the List ---------------------------------------------->
+
+      <script src="{% static './Packages/Anime.min.js' %}"></script>
+      <script src="{% static './Sante.js' %}"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+
+</body>
+</html> 

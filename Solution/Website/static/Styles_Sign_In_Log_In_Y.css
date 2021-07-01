@@ -1,0 +1,388 @@
+/* -- Fonts-------------------------------------------------------------------- */
+@import 'https://fonts.googleapis.com/css?family=Pathway+Gothic+One|Roboto:300,400,500,700';
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+html {
+  -webkit-font-smoothing: antialiased;
+  font-family: "FontSansSmall-Regular", sans-serif;
+  font-weight: 600;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+/* -- End Fonts-------------------------------------------------------------------- */
+
+
+/* -- Sign In Form -------------------------------------------------------------------- */
+.Hero_Sign_In {
+  background: url('./Resources/Yacine/Banner_Background_04.jpg') no-repeat;
+  background-size: cover;
+  object-fit: fill;
+  height: 1250px;
+  position:relative;
+  margin-top: 0px;
+  margin-left: -543px;
+  z-index: -5;
+}
+
+.Hero_Log_In {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+}
+
+.Hero_Log_In img {
+  position: absolute;
+  top: 0;
+  left: -100px;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  min-width: 50%;
+  min-height: 50%;
+}
+
+
+.sign_in {
+  position: absolute;
+  top: 40px;
+  width: 500px;
+  height: 1170px;
+  margin: auto;
+  left: 0;
+  right: 0;
+  border: 2px solid #f3f0eb;
+  border-radius: 8px;
+  background-color: #f3f0eb;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.sign_in h1 {
+  color:#79be21;
+  font-family: 'Patrick Hand' ,cursive;
+  font-size: 30px;
+  font-weight: 400;
+  margin-left: 1em;
+}
+
+.log_in {
+  position: absolute;
+  top: 135px;
+  width: 500px;
+  height: 405px;
+  margin: auto;
+  left: 0;
+  right: 0;
+  border: 2px solid #f3f0eb;
+  border-radius: 8px;
+  background-color: #f3f0eb;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.log_in h1 {
+  color:#79be21;
+  font-family: 'Patrick Hand' ,cursive;
+  font-size: 30px;
+  font-weight: 400;
+  margin-left: 1em;
+}
+
+.Avatar_Drop {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 20px;
+  margin-left: 9em;
+}
+
+.Certificate_Drop {
+  width: 100%;
+  height: 250px;
+  margin-bottom: 10px;
+  margin-left: 15%;
+}
+
+.form_check_input {
+  color:#79be21;
+  font-family: 'Patrick Hand' ,cursive;
+  font-size: 17px;
+  font-weight: 400;
+  margin-left: 97px;
+  margin-top: 10px;
+}
+
+.form_check_input a{
+  text-decoration: none;
+  color: blue;
+}
+
+.form_check_input_log_in {
+  color:#79be21;
+  font-family: 'Patrick Hand' ,cursive;
+  font-size: 17px;
+  font-weight: 400;
+  margin-left: 185px;
+  margin-top: 10px;
+}
+
+.form_check_input_log_in a{
+  text-decoration: none;
+  color: blue;
+}
+
+.return {
+  text-decoration: none;
+  color: blue;
+  margin-right: 1.9em;
+}
+/* -- Inputs -------------------------------------------------------------------- */
+input {
+	outline: none;
+	border: none;
+}
+
+textarea {
+  outline: none;
+  border: none;
+}
+
+textarea:focus, input:focus {
+  border-color: transparent !important;
+}
+
+input:focus::-webkit-input-placeholder { color:transparent; }
+input:focus:-moz-placeholder { color:transparent; }
+input:focus::-moz-placeholder { color:transparent; }
+input:focus:-ms-input-placeholder { color:transparent; }
+
+textarea:focus::-webkit-input-placeholder { color:transparent; }
+textarea:focus:-moz-placeholder { color:transparent; }
+textarea:focus::-moz-placeholder { color:transparent; }
+textarea:focus:-ms-input-placeholder { color:transparent; }
+
+input::-webkit-input-placeholder { color: #999999; }
+input:-moz-placeholder { color: #999999; }
+input::-moz-placeholder { color: #999999; }
+input:-ms-input-placeholder { color: #999999; }
+
+textarea::-webkit-input-placeholder { color: #999999; }
+textarea:-moz-placeholder { color: #999999; }
+textarea::-moz-placeholder { color: #999999; }
+textarea:-ms-input-placeholder { color: #999999; }
+/* -- Buttons -------------------------------------------------------------------- */
+button {
+	outline: none !important;
+	border: none;
+	background: transparent;
+}
+
+button:hover {
+	cursor: pointer;
+}
+
+iframe {
+	border: none !important;
+}
+/* -- All Form Placeholders -------------------------------------------------------------------- */
+.login100-form {
+  width: 380px;
+}
+/* -- Text Paceholders -------------------------------------------------------------------- */
+.wrap-input100 {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  margin-bottom: 10px;
+  left: 15%;
+}
+
+.input100 {
+  font-family: 'Patrick Hand' ,cursive;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #666666;
+  display: block;
+  width: 100%;
+  background: #e6e6e6;
+  height: 50px;
+  border-radius: 25px;
+  padding: 0 30px 0 60px;
+}
+/* -- Icons  -------------------------------------------------------------------- */
+.symbol-input100 {
+  font-size: 15px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  border-radius: 25px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-left: 30px;
+  pointer-events: none;
+  color: #666666;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.input100:focus + .focus-input100 + .symbol-input100 {
+  color: #79be21;
+  padding-left: 20px;
+}
+/* -- Submit Button -------------------------------------------------------------------- */
+.container-login100-form-btn {
+  width: 50%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: 40%;
+  margin-top: 80px;
+}
+
+.login100-form-btn {
+  font-family: 'Patrick Hand' ,cursive;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #fff;
+  text-transform: uppercase;
+  width: 100%;
+  height: 50px;
+  border-radius: 25px;
+  background: #57b846;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 25px;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.login100-form-btn:hover {
+  background: #202020;
+}
+/* -- Positions Validations Messeges -------------------------------------------------------------------- */
+.validate-input {
+  position: relative;
+}
+
+.alert-validate::before {
+  content: attr(data-validate);
+  position: absolute;
+  max-width: 70%;
+  background-color: white;
+  border: 1px solid #c80000;
+  border-radius: 13px;
+  padding: 4px 32px 4px 10px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 8px;
+  pointer-events: none;
+  font-family: 'Patrick Hand' ,cursive;
+  font-weight: 500;
+  color: #c80000;
+  font-size: 14px;
+  line-height: 1.4;
+  text-align: left;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s;
+  -o-transition: opacity 0.4s;
+  -moz-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+}
+
+.alert-validate::after {
+  content: "\f06a";
+  font-family: FontAwesome;
+  display: block;
+  position: absolute;
+  color: #c80000;
+  font-size: 15px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 20px;
+}
+
+.alert-validate:hover:before {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media (max-width: 992px) {
+.alert-validate::before {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+/* -- End Sign In Form -------------------------------------------------------------------- */
+
+
+/* -- Filepond -------------------------------------------------------------------- */
+.filepond--drop-label {
+  color: #4c4e53;
+}
+
+.filepond--label-action {
+  -webkit-text-decoration-color: #babdc0;
+  text-decoration-color: #babdc0;
+}
+
+.filepond--panel-root {
+  border-radius: 2em;
+  background-color: #edf0f4;
+  height: 1em;
+}
+
+.filepond--item-panel {
+  background-color: #595e68;
+}
+
+.filepond--drip-blob {
+  background-color: #7f8a9a;
+}
+/* -- End Filepond -------------------------------------------------------------------- */
+
+
+/* -- Scroll Bar Style -------------------------------------------------------------------- */
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #000000;
+}
+
+body::-webkit-scrollbar {
+  width: 6px;
+  background-color: #000000;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #FFFFFF;
+}
+/* -- End Scroll Bar Style -------------------------------------------------------------------- */

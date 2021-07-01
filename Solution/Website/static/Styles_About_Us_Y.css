@@ -1,0 +1,563 @@
+/* -- Fonts-------------------------------------------------------------------- */
+@import 'https://fonts.googleapis.com/css?family=Pathway+Gothic+One|Roboto:300,400,500,700';
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+html {
+  -webkit-font-smoothing: antialiased;
+  font-family: "FontSansSmall-Regular", sans-serif;
+  font-weight: 600;
+}
+/* -- End Fonts-------------------------------------------------------------------- */
+
+
+/* -- Navigation Bar -------------------------------------------------------------------- */
+nav {
+  width: 100%;
+  height: 75px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  position: relative;
+}
+
+nav:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 70px;
+  box-shadow: 0px 0px 110px 30px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  background-color: red;
+  top: -70px;
+  z-index: -1;
+}
+
+.col-nav {
+  float: left;
+  margin: 0 2.33333333%;
+}
+
+.col-nav:first-child, .col-nav:last-child {
+  width: 18%;
+}
+
+.col-nav:nth-child(2) {
+  width: 50%;
+}
+
+.logo-container-nav,
+.menu-container-nav,
+.buttons-container-nav {
+  height: 100%;
+  position: relative;
+}
+
+.logo-icon-nav {
+  display: block;
+  width: 155px;
+  height: 65px;
+  background: url('./Resources/Yacine/Banner_Logo.png') no-repeat center center;
+  background-size: contain;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.menu-content-nav {
+  height: 100%;
+}
+
+.menu-content-nav li {
+  display: inline-block;
+  float: left;
+  height: 100%;
+  line-height: 72px;
+  width: 19.53125%;
+  margin: 0 2.734375%;
+  letter-spacing: 0.5px;
+}
+
+.menu-content-nav li:hover {
+  border-bottom: 2px solid #FFFFFF;
+  cursor: pointer;
+}
+
+.selected-categories:after {
+  content: "";
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  position: relative;
+  margin-right: 12px;
+  top: -4px;
+  left: 10px;
+  border: 1px solid #FFFFFF;
+  border-top: 1px solid transparent;
+  border-left: 1px solid transparent;
+  transform: rotate(45deg);
+  transition: all 0.15s linear;
+}
+
+.selected-rotate:after {
+  transform: rotate(-135deg);
+  top: 1px;
+}
+
+.text-nav {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 14px;
+}
+
+.text-nav a {
+  text-decoration: none;
+}
+
+.text-nav a:link, .text-nav a:visited {
+  color: #FFFFFF;
+}
+
+.buttons-content-nav {
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.buttons-content-nav a {
+  display: inline-block;
+  width: 100px;
+  height: 36px;
+  line-height: 36px;
+  border-radius: 25px;
+}
+
+.buttons-content-nav a:first-child {
+  border: 2px solid #FFFFFF;
+  margin-right: 2px;
+}
+
+.buttons-content-nav a:last-child {
+  background-color: #FFFFFF;
+  border: 2px solid #FFFFFF;
+}
+
+.text-btn-nav {
+  text-align: center;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+}
+
+.text-btn-nav a {
+  text-decoration: none;
+}
+
+.text-btn-nav a:first-child {
+  color: #FFFFFF;
+}
+
+.text-btn-nav a:last-child {
+  color: #222222;
+}
+
+.sub-menu {
+  display: none;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 155px;
+  top: 0;
+  z-index: -1;
+  background-color: #009cde;
+  background-image: radial-gradient(circle farthest-side at center bottom, #303030, #202020 100%);
+}
+
+.sub-menu-list {
+  margin: 99px 0 0 3%;
+  overflow: hidden;
+}
+
+.sub-menu-list li {
+  width: 30%;
+  float: left;
+  white-space: nowrap;
+
+}
+
+.sub-menu-list li:nth-child(4) {
+  clear: left;
+}
+
+.sub-menu-list li:nth-child(2), .sub-menu-list li:nth-child(5) {
+  margin: 0 5%;
+}
+
+.sub-menu-list li:nth-child(1n+4) {
+  margin-top: 30px;
+}
+
+.sub-menu-list li a {
+  color: white;
+  font-weight: 500;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+}
+
+.sub-menu-list li a span {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 4px;
+  color: rgba(255, 255, 255, 0.85);
+  font-family: "Roboto", sans-serif;
+}
+
+.sub-menu-list li a:hover {
+  text-decoration: underline;
+}
+
+.close-menu-categories {
+  position: absolute;
+  right: 2.33333333%;
+  top: 99px;
+  display: block;
+  width: 30px;
+  height: 30px;
+}
+
+.close-menu-categories span {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.3);
+  position: relative;
+  top: 12.5px;
+  left: 1px;
+}
+
+.close-menu-categories span:first-child {
+  transform: rotate(45deg);
+}
+
+.close-menu-categories span:last-child {
+  transform: rotate(-45deg) translate(1px, -2px);
+}
+
+.closer {
+  width: 100%;
+  min-height: 528px;
+  background-color: transparent;
+  position: relative;
+  z-index: -2;
+}
+/* -- "i" Icon For About The Website -------------------------------------------------------------------- */
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  object-position: center;
+}
+/* -- To Make "Log in" and "Sign In" Underlined -------------------------------------------------------------------- */
+.text-btn-nav a:active {
+  text-decoration: underline;
+}
+/* -- End Navigation Bar -------------------------------------------------------------------- */
+
+
+/* -- Part 02 -------------------------------------------------------------------- */
+.hero {
+  min-width: 1024px;
+  min-height: 600px;
+  background-color:#202020 ;
+  background-size: cover;
+  height: 1780px;
+  position: relative;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.WCUS h1 {
+  position: relative;
+  text-align: center;
+  color:#FFFFFF;
+  top: 110px;
+  font-family: 'Patrick Hand' ,cursive;
+  font-size: 60px;
+  font-weight: 400;
+}
+
+.WCUS ul {
+  position: relative;
+  top: 200px;
+  justify-content: center;
+  display: flex;
+  width:100%;
+}
+
+.WCUS li {
+  width:20%;
+  float:left;
+  margin-right: 1.5%;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  transition: all .6s !important;
+  align-items: center;
+  text-align: center;
+}
+
+.WCUS h3 {
+  margin-top: 25px;
+  margin-bottom: 15px;
+  color:#79be21;
+  font-family: 'Patrick Hand' ,cursive;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.WCUS h4 {
+  display:inline-block;
+  width: 245px;
+  word-wrap : break-word;
+  color:#FFFFFF;
+  font-family: 'Patrick Hand' ,cursive;
+  font-size: 20px;
+  font-weight: 400;
+  margin-top: 10px;
+}
+
+#imgWCUS {
+  height: 80px;
+  width: 80px;
+}
+/* -- End Part 02 -------------------------------------------------------------------- */
+
+
+/* -- Part 02 -------------------------------------------------------------------- */
+.MTT {
+  text-align: center;
+  top: 60px;
+}
+
+.MTT h1 {
+  position: relative;
+  text-align: center;
+  color:#FFFFFF;
+  top: 110px;
+  font-family: 'Patrick Hand' ,cursive;
+  font-size: 60px;
+  font-weight: 400;
+}
+
+.MTT ul {
+  position: relative;
+  top: 200px;
+  justify-content: center;
+  display: flex;
+  margin-bottom: 50px;
+  margin-left: 4.5%;
+}
+
+.MTT li {
+  width:24%;
+  float:left;
+  margin-right: 5%;
+  background-color: #f3f0eb;
+  border-radius: 8px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  align-items: center;
+  text-align: center;
+}
+
+.MTT h3 {
+  margin-top: 25px;
+  margin-bottom: 10px;
+  color:#79be21;
+  font-family: 'Patrick Hand' ,cursive;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.MTT h4 {
+  display:inline-block;
+  width: 245px;
+  word-wrap : break-word;
+  color:#000000;
+  font-family: 'Patrick Hand' ,cursive;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.MTT h6 {
+  display:inline-block;
+  width: 270px;
+  word-wrap : break-word;
+  color:#000000;
+  font-family: 'Patrick Hand' ,cursive;
+  font-size: 20px;
+  font-weight: 400;
+  margin-top: 35px;
+}
+
+.MTT i {
+  color:grey;
+  font-size: 1.5em;
+  margin-top: 25px;
+  margin-left: 5px;
+}
+
+.MTT i:hover {
+  color: #79be21;
+}
+
+#imgMTT {
+  height: 140px;
+  width: 140px;
+  border-radius: 50%;
+}
+/* -- End Part 02 -------------------------------------------------------------------- */
+
+
+/* -- Footer -------------------------------------------------------------------- */
+.Footer {
+  background-color: #202020;
+  background-size: cover;
+  height: 585px;
+  position: relative;
+  padding-top: 40px;
+}
+
+.Footer ul {
+  position: absolute;
+  width: 100%;
+  justify-content: center;
+  display: flex;
+}
+
+.Footer li {
+  float:left;
+  text-align: left;
+}
+
+.Footer li:nth-child(2) , .Footer li:nth-child(3) {
+  margin-left: 5.5%;
+}
+
+.Contact {
+  position: relative;
+  text-align: left;
+  height: 340px;
+  width: 350px;
+  top: 80px;
+}
+
+.Contact a , .Contact h2 {
+  text-decoration: none;
+  color: grey;
+  margin-top: 15px;
+  font-family: 'Patrick Hand' ,cursive;
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.Contact a:hover , .Contact h2:hover {
+  text-decoration: none;
+  color: #79be21;
+}
+
+.Contact h1 {
+  position: absolute;
+  color: white;
+  font-family: 'Patrick Hand' ,cursive;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.Contact span {
+		display: block;
+		width: 50px;
+		height: 1px;
+		background-color: #F60;
+}
+
+.Links {
+  position: relative;
+  top: 50px;
+}
+
+hr {
+  position: relative;
+  height: 1px;
+  border: none;
+  top: 40px;
+}
+
+hr:before,
+hr:after {
+  position: absolute;
+  height: 10px;
+  border-radius: 50%;
+  content: "";
+}
+
+hr:before { left: 0; }
+hr:after  { right: 0; }
+
+hr.red, hr.red:before, hr.red:after {
+  background-color: #79be21;
+}
+
+.Info h2 {
+  position: relative;
+  top: 50px;
+}
+
+.Separater {
+  position: relative;
+  top: 75px;
+}
+
+.Separater1 {
+  position: relative;
+  top: 150px;
+}
+
+.Separater2 {
+  position: relative;
+  top: 285px;
+  height: 0;
+  text-align: center;
+}
+
+.Separater2 hr {
+  position: relative;
+  top: 250px;
+  width: 90%;
+}
+
+.Separater2 h2 {
+  position: relative;
+  top: 250px;
+  text-decoration: none;
+  color: grey;
+  margin-top: 15px;
+}
+/* -- End Footer -------------------------------------------------------------------- */
+
+
+/* -- Scroll Bar Style -------------------------------------------------------------------- */
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #000000;
+}
+
+body::-webkit-scrollbar {
+  width: 6px;
+  background-color: #000000;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #FFFFFF;
+}
+/* -- End Scroll Bar Style -------------------------------------------------------------------- */
