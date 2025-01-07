@@ -23,7 +23,7 @@
 ![image](https://img.shields.io/badge/json-5E5C5C?style=for-the-badge&logo=json&logoColor=white)
 ![image](https://img.shields.io/badge/Google_chrome-4285F4?style=for-the-badge&logo=Google-chrome&logoColor=white)
 ![image](https://img.shields.io/badge/Codepen-000000?style=for-the-badge&logo=codepen&logoColor=white)
-![image](https://img.shields.io/badge/SCSS-9558B2?style=for-the-badge&logo=julia&logoColor=white)
+![image](https://img.shields.io/badge/SCSS-9558B2?style=logo=logoColor=white)
 
 
 > [!IMPORTANT] 
